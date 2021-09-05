@@ -10,17 +10,17 @@ body{
     min-height: 99vh;
     background-color: rgb(240, 240, 240);
     padding-top: 1%;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
 }
 
 
 #inputdiv{
-    width: 96%;
-    margin-left: 2%;
+    width: 98%;
+    margin-left: 1%;
     min-height:35vh;
-    background-color: blueviolet; 
+    /* background-color: blueviolet;  */
     text-align: center;
-    padding-top:3px;
+    padding-top:35px;
     background-image: url("thunderguard_cannon__background_dev___lighting_dev_by_conor3ddesign_ddirm2e-fullview.png");
     background-size: cover;
 }      
@@ -29,7 +29,16 @@ body{
             margin-bottom: 10px;
             text-align: center;
             color:rgb(230, 187, 187);
+            /* color: red; */
             font-size: 22px;
+            background-color: black;
+            position: fixed;
+            top: 0px;
+            right: 1%;
+            left: 1%;
+            margin: auto;
+            padding: 2px;
+            border-radius: 3px;
             
         }
         #inputdiv p{
@@ -41,6 +50,8 @@ body{
             min-height: 30px;
             margin-bottom: 10px;
             text-align: center;
+            font-size: larger;
+            color: #ff3300;
         }
         #big {
             
@@ -48,31 +59,36 @@ body{
             min-height: 30px;
             margin-bottom: 10px;
             text-align: center;
+            font-size: larger;
+            color: #ff3300;
         }
 
         #btn{
-           min-width: 100px;
-           height: 30px;
+           min-width: 120px;
+           height: 33px;
            margin-bottom: 5px;
            background-color: red;
            color: white;
+           border: none;
            
         }
 
         #refresh{
-            min-width: 100px;
+            min-width: 120px;
             height: 30px;
             margin-bottom: 5px;
             background-color: green;
             color: white;
+            border: none;
+            visibility:hidden;
         }
 
 #outputdiv{
-    margin-top: 2%;
-    width: 96%;
-    margin-left: 2%;
+    margin-top: 1%;
+    width: 98%;
+    margin-left: 1%;
     min-height:61vh;
-    background-color: blueviolet; 
+    /* background-color: blueviolet;  */
     padding-top: 1%;
     padding-bottom: 1%;
 
@@ -89,8 +105,9 @@ body{
     padding-bottom: 1%;
     padding-top: 2%;
     /* border: 2px solid red; */
-    background-image: url("abstract.jpg");
+    background-image: url("8uLjyU.jpg");
     background-size: cover;
+    border: 1px solid red;
 }
 
 p{
@@ -103,8 +120,9 @@ p{
 
 .resultdiv h3{
     text-align: center;
-    color:white;
+    /* color:white; */
     margin: 5px;
+    color:aqua;
    
 }
 
