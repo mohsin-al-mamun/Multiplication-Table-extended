@@ -2,8 +2,8 @@
 
 let Button = document.getElementById("btn");
 let Refresh = document.getElementById("refresh");
-let SmallNum = document.getElementById("small");
-let BigNum = document.getElementById("big");
+// let SmallNum = document.getElementById("small");
+// let BigNum = document.getElementById("big");
 let Top = document.getElementById("top");
 
 
@@ -20,38 +20,40 @@ function initialize(event){
     event.preventDefault();
     document.getElementById("container").style.backgroundColor ="aqua";
     Refresh.style.visibility="visible";
-    let start = +SmallNum.value;       // creating numbers from input section after submiting. It won't work outside this function as
-    let end = +BigNum.value;        // this values are generated after clicking the submit button.
+    let start = document.getElementById("small").value;                          // creating numbers from input section after submiting. It won't work outside 
+    let end = document.getElementById("big").value;                             //   this function as this values are generated after clicking the submit button.
 
-    if (start ==" "){alert("Please Enter a Number.");       // preventing from empty stings input
-   } else{myloop(start,end);};      // Here is the function call to "myloop()"
+    if (start ==" "){alert("Please Enter a Number.");                // preventing from empty stings input
+   } else{myloop(start,end);};                                       // Here is the function call to "myloop()"
     
 
    }
-                  function myloop(i,j){   // We need two loops to perform this project. The outer loop is written in form of a function here 
-                     create(i);     // so that we can use it recursively and can implement little delay. This will trigger "create(num)"
+                  function myloop(i,j){             // We need two loops to perform this project. The outer loop is written in form of a function here 
+                     create(i);                    // so that we can use it recursively and can implement little delay. This will trigger "create(num)"
                      i++;
-                     if (i<=j){setTimeout(myloop,300,i,j)}  // set time out must have a function with dealy, and parameters of the funtion will have to be 
-                  }                                       //  mentioned as parameters of setTimeout function. Otherwise, bugs may arise.
+                     if (i<=j){setTimeout(myloop,300,i,j)}
+                     else{alert("Task completed!!!")};                     // set time out must have a function with dealy, 
+                                                                                 //and parameters of the funtion will have to be 
+                  }                                                              //  mentioned as parameters of setTimeout function. Otherwise, bugs may arise.
 
 
 
 
-                  function create(num){    // This is the innermost function which will do the main things . it has a loop to produce tables and values.
-
-                        
-                        let newDiv = document.createElement("div");
-                        newDiv.className = "resultdiv";
-                        let header = document.createElement("h3");
-                        header.innerHTML = `The multiplication table of ${num} is..`;
-                        newDiv.appendChild(header);
-                        for(let j=1; j<=10; j++){
+                function create(num){                                       // This is the innermost function which will do the main things . 
+                                                                              //it has a loop to produce tables and values.
+                   let newDiv = document.createElement("div");
+                   newDiv.className = "resultdiv";
+                   let header = document.createElement("h3");
+                   header.innerHTML = `The multiplication table of ${num} is..`;
+                   newDiv.appendChild(header);
+                          for(let j=1; j<=10; j++){
                            let result =  document.createElement("p");
                            result.innerHTML = `${num} X ${j} = ${num*j}`;
-                           newDiv.appendChild(result);
-                           window.scrollTo(0,document.getElementById("outputdiv").scrollHeight); // This will autometically scroll down the page.
+                           newDiv.appendChild(result);       
                         }
-                        document.getElementById("outputdiv").appendChild(newDiv);
+                       
+                     document.getElementById("outputdiv").appendChild(newDiv);
+                     window.scrollTo(0,document.getElementById("outputdiv").scrollHeight);  // This will autometically scroll down the page.
                   
                   }
 
